@@ -1,5 +1,11 @@
 package Ejercicio_5;
 
+/* Justifique, brevemente, porqué ha seleccionado cada estructura de datos para los atributos
+*
+*  Justificación: Se seleccionó un ArrayList para los atributos tweets, followers y following
+*  porque permite un acceso rápido a los elementos y es dinámico.
+* */
+
 import java.util.ArrayList;
 
 public class UserAccount {
