@@ -2,15 +2,36 @@
 https://github.com/JPabloLobato/Caso-Final-de-los-Finales-Integrador.git
 
 # Ejercicio 1 Test:
-1) b) Debemos establecer la visibilidad más restrictiva (por ejemplo, privada) en los atributos de una clase. Así, cualquier software que utilice nuestro objeto, sólo accederá al estado de los objetos mediante los métodos que le hayamos permitido utilizar.
+1) En relación al estado de un objeto, para preservar el principio de encapsulación:
+    b) Debemos establecer la visibilidad más restrictiva (por ejemplo, privada) en los atributos de una clase. Así, cualquier software que utilice nuestro objeto, sólo accederá al estado de los objetos mediante los métodos que le hayamos permitido utilizar.
 
-2) b) Falso
+2) Los métodos de una clase no pueden devolver objetos:
+    b) Falso
 
-3) b) Herencia
+3) ¿Cuál de las siguientes características de la programación orientada a objetos está relacionada con la reutilización de código?
+    b) Herencia
 
-4) b) O(1)
+4) El tiempo de acceso a un dato en una lista de tipo LinkedList es en el mejor de los casos de:
+    b) O(1)
 
-5) a) Verdadero
+5) Un algoritmo de ordenación que implemente el método de inserción se basa en la idea de ir seleccionando el número correspondiente en la lista desordenada que se va a insertar en la posición última de la lista ordenada:
+    a) Verdadero
 
 # Ejercicio 2:
-2)
+1) La primera opción tiene una complejidad lineal y un espacio constante, siendo la elección más eficiente en memoria. La segunda, con complejidad constante pero espacio cuadrático, excede el límite de 4 KB. La tercera, con complejidad logarítmica y espacio logarítmico, es la más adecuada para el sistema dado su uso eficiente de la memoria.
+
+2) Una tabla Hash utiliza una función de hash para  claves a valores, lo que permite un acceso rápido a los datos mediante la búsqueda de la clave. En cambio, un árbol organiza los datos en una estructura jerárquica, como un árbol binario de búsqueda, lo cual ayuda en la búsqueda, inserción y eliminación de datos de manera más eficiente.
+
+   Se utilizar una tabla Hash cuando se necesita acceso rápido a los datos y la distribución de las claves es uniforme. Por otro lado, los árboles son más adecuados cuando se necesita ordenar los datos y realizar funciones como búsqueda, inserción y eliminación de manera rápida y sencilla, sobretodo en conjuntos de datos grandes o en aplicaciones que requieren mantenimiento del orden.
+
+3) Una pila sigue el principio LIFO (Last In, First Out), mientras que una cola sigue el principio FIFO (First In, First Out). Se utiliza una pila para un acceso rápido al último elemento insertado igual que este sirve para ser el último eliminado, como en la inversión de elementos. En cambio, una cola es útil para un camino rápido tanto al primer elemento insertado como al primero eliminado, como en las colas de espera. Ambas tienen complejidad O(1) para inserción y eliminación en implementaciones básicas con arrays o listas enlazadas.
+
+4) Explica   el    método    de    ordenación    denominado    inserción               y     describe  las i teraciones sobre el s iguiente conjunto de datos:
+   50 20 84 13 22 16 89 85
+   El método de ordenación por inserción coloca cada elemento en su posición correcta, uno por uno. Para el conjunto dado:
+   Iteración 1: Se coloca el 20 por delante del 50, al no haber elementos anteriores se deja igual, quedando 20 50 84 13 22 16 89 85.
+   Iteración 2: Se coloca el 84 se compara con el 50 y se coloca por delante del 50, quedando 20 50 84 13 22 16 89 85.
+   Iteración 3: Se coloca el 13 se compara con el 84, luego con el 50, luego con el 20y se coloca por delante del 20, quedando 13 20 50 84 22 16 89 85.
+   Iteración 4: Se coloca el 22 se compara con el 84, luego con el 50, luego con el 20 y se coloca por delante del 20, quedando 13 20 22 50 84 16 89 85.
+   Iteración 5: Se coloca el 89 se compara con el 84 y se coloca por delante del 84, quedando 13 20 22 50 84 89 16 85.
+   Iteración 6: Se coloca el 85 se compara con el 89, luego con el 84 y se coloca por delante del 84, quedando 13 16 20 22 50 84 85 89.
