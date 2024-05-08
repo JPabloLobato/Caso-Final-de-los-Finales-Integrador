@@ -38,3 +38,23 @@ https://github.com/JPabloLobato/Caso-Final-de-los-Finales-Integrador.git
     Iteración 4: Se coloca el 22 se compara con el 84, luego con el 50, luego con el 20 y se coloca por delante del 20, quedando 13 20 22 50 84 16 89 85.
     Iteración 5: Se coloca el 89 se compara con el 84 y se coloca por delante del 84, quedando 13 20 22 50 84 89 16 85.
     Iteración 6: Se coloca el 85 se compara con el 89, luego con el 84 y se coloca por delante del 84, quedando 13 16 20 22 50 84 85 89.
+
+# Ejercicio 3:
+    El código imprimirá "0". Debido a que el método 'recursive' llama inialmente a los parámetros a = 1 y b = 2. En cada llamada del método, b baja 1 hasta alcanzar 0, que es cuando devuelve 1. Por el otro lado en cuyo caso de a = 0 nunca se alcanza debido a la condición 'b==0', por lo que el valor 'a' no cambia el resultado final.
+    Para corregir ese fallo, podemos hacer que el programa tenga en cuenta 'a' igual 0, podemos escirbirlo así:
+    import java.util.*;
+
+    public class Main {
+        public static void main(String[] args) {
+            int a = recursive(1, -2);
+            System.out.println(a);
+        }
+
+        public static int recursive(int a, int b) {
+            if (b == 0 || a == 0) { //Aquí estaría el cambio.
+                return 1;
+            } else {
+                return a * recursive(a, b - 1);
+            }
+        }
+    }
