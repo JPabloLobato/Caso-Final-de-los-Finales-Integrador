@@ -11,15 +11,15 @@ import java.util.ArrayList;
 public class UserAccount {
     private String alias;
     private String email;
-    private ArrayList<Tweet> tweets;
-    private ArrayList<UserAccount> followers;
-    private ArrayList<UserAccount> following;
+    private final ArrayList<Tweet> tweets;
+    private final ArrayList<UserAccount> followers;
+    private final ArrayList<UserAccount> following;
 
     public UserAccount(String alias, String email) {
-        if (!Utils.isValidAlias(alias)) {
+        if (!Utils.isInvalidAlias(alias)) {
             throw new IllegalArgumentException("El alias debe contener solo números y letras");
         }
-        if (!Utils.isValidEmail(email)) {
+        if (!Utils.isInvalidEmail(email)) {
             throw new IllegalArgumentException("El email no es válido");
         }
         this.alias = alias;
@@ -54,7 +54,7 @@ public class UserAccount {
     }
 
     public void setAlias(String alias) {
-        if (!Utils.isValidAlias(alias)) {
+        if (!Utils.isInvalidAlias(alias)) {
             throw new IllegalArgumentException("El alias debe contener solo números y letras.");
         }
         this.alias = alias;
@@ -65,7 +65,7 @@ public class UserAccount {
     }
 
     public void setEmail(String email) {
-        if (!Utils.isValidEmail(email)) {
+        if (!Utils.isInvalidEmail(email)) {
             throw new IllegalArgumentException("El email no es válido.");
         }
         this.email = email;
